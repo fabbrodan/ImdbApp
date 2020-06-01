@@ -1,6 +1,13 @@
-.App > .Header {
+.Header {
   height: 50px;
   position: relative;
   top: 0px;
+  text-align: center;
+}
+
+.Footer {
+  height: 50px;
+  position: sticky;
+  bottom: 0px;
   text-align: center;
 }
