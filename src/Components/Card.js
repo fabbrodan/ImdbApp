@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom'
 import ActionButton from './ActionButton';
 
 class Card extends Component {
 
     constructor(props) {
         super(props);
-
+        
         this.imgUrl = props.imgUrl;
         this.name = props.name;
         this.popularity = props.popularity;
@@ -16,7 +15,7 @@ class Card extends Component {
         return(
             <tr>
                 <td className="imgCell">
-                    <img src={this.imgUrl} alt={this.imgUrl}></img>
+                    <img src={this.imgUrl} alt={this.name}></img>
                 </td>
                 <td className="nameCell">
                     <p>{this.name}</p>
@@ -25,7 +24,7 @@ class Card extends Component {
                     <p>{this.popularity}</p>
                 </td>
                 <td className="buttonCell">
-                    <p><ActionButton actionName={DeleteActor}/></p>
+                    <p><ActionButton actionName={DeleteActor} textValue="Delete Row"/></p>
                 </td>
             </tr>
         )

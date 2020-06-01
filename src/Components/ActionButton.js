@@ -5,11 +5,12 @@ class ActionButton extends Component {
         super(props);
 
         this.actionName = props.actionName;
+        this.textValue = props.textValue;
     }
 
     render() {
         return (
-            <input type="button" onClick={this.actionName}></input>
+            <input type="button" onClick={this.actionName} value={this.textValue}></input>
         )
     }
 }
