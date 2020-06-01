@@ -1,4 +1,47 @@
+#tableDiv {
+    display: block;
+}
+
+#addActor-btn {
+    display:inline-flexbox;
+}
+
 img {
     width: 250px;
     height: 350px;
+    border-radius: 5px;
+}
+
+table {
+    display:inline-flexbox;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    border: solid 2px black;
+    border-radius: 5px;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: solid 2px black;
+    padding-bottom: 5px;
+    text-align: left;
+    background-color:white;
+}
+
+th > input[type="button"] {
+    
+    border: none;
+    font-weight: bolder;
+    font-size: medium;
+}
+
+th > input[type="button"]:hover {
+    color: rgb(180, 92, 92);
+    background-color: rgba(50, 50,50, 0.2)
+}
+
+tr > td {
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
 }

@@ -6,11 +6,12 @@ class ActionButton extends Component {
 
         this.actionName = props.actionName;
         this.textValue = props.textValue;
+        this.identifier = props.identifier;
     }
 
     render() {
         return (
-            <input type="button" onClick={this.actionName} value={this.textValue}></input>
+            <input id={this.identifier} type="button" onClick={this.actionName.bind(this, this.identifier)} value={this.textValue}></input>
         )
     }
 }

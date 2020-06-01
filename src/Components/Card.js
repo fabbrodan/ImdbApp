@@ -9,13 +9,14 @@ class Card extends Component {
         this.imgUrl = props.imgUrl;
         this.name = props.name;
         this.popularity = props.popularity;
+        this.action = props.action;
     }
 
     render() {
         return(
             <tr>
                 <td className="imgCell">
-                    <img src={this.imgUrl} alt={this.name}></img>
+                    <img src={this.imgUrl} alt={this.name + ".jpg"}></img>
                 </td>
                 <td className="nameCell">
                     <p>{this.name}</p>
@@ -24,15 +25,11 @@ class Card extends Component {
                     <p>{this.popularity}</p>
                 </td>
                 <td className="buttonCell">
-                    <p><ActionButton actionName={DeleteActor} textValue="Delete Row"/></p>
+                    <ActionButton identifier={this.name} actionName={this.action} textValue="Delete Row"/>
                 </td>
             </tr>
         )
     }
-}
-
-let DeleteActor = () => {
-    console.log("delete button pressed");
 }
 
 export default Card;

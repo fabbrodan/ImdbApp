@@ -1,3 +1,5 @@
-.App {
-  
+.App > .Header {
+  height: 50px;
+  position: absolute;
+  top: 0px;
 }
