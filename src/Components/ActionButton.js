@@ -9,7 +9,7 @@ class ActionButton extends Component {
 
     render() {
         return (
-            <input type="button" onclick={this.actionName}></input>
+            <input type="button" onClick={this.actionName}></input>
         )
     }
 }

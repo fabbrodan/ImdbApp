@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Card from './Components/Card'
+import Card from './Components/Card';
+import ActionButton from './Components/ActionButton';
 
 class App extends Component {
 
@@ -8,14 +9,16 @@ class App extends Component {
     super(props);
 
     this.state = {
-      cards: new Array()
+      cards: new Set()
     }
 
     this.AddCard = this.AddCard.bind(this);
   }
 
-  AddCard(Card) {
-    this.state.cards.push(Card);
+  AddCard() {
+    this.setState((st) => ({
+      cards: st.cards.add(<Card imgUrl="abc.com" name="Dummy Name" popularity="10.01575"/>)
+    }));
   }
 
   render() {
@@ -23,13 +26,18 @@ class App extends Component {
       <div className="App">
         <table id="mainTable">
           <thead>
-            <td>Image</td>
-            <td>Name</td>
-            <td>Popularity</td>
-            <td>Action</td>
+            <tr>
+              <td>Image</td>
+              <td>Name</td>
+              <td>Popularity</td>
+              <td>Action</td>
+            </tr>
           </thead>
-          {this.state.cards}
+          <tbody>
+            {this.state.cards}
+          </tbody>
         </table>
+        <ActionButton actionName={this.AddCard}/>
       </div>
     );
   }

@@ -16,7 +16,7 @@ class Card extends Component {
         return(
             <tr>
                 <td className="imgCell">
-                    <img src={this.imgUrl} alt="placeholder"></img>
+                    <img src={this.imgUrl} alt={this.imgUrl}></img>
                 </td>
                 <td className="nameCell">
                     <p>{this.name}</p>
