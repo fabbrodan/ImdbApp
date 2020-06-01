@@ -8,8 +8,14 @@ class App extends Component {
     super(props);
 
     this.state = {
-      cards = []
+      cards: new Array()
     }
+
+    this.AddCard = this.AddCard.bind(this);
+  }
+
+  AddCard(Card) {
+    this.state.cards.push(Card);
   }
 
   render() {
