@@ -14,6 +14,20 @@ class CardCollection extends Component {
         this.state = {
             Cards: []
         }
+
+        const endOfTableRef = React.createRef();
+    }
+
+    componentDidMount() {
+        this.scrollToBottom();
+    }
+
+    componentDidUpdate() {
+        this.scrollToBottom();
+    }
+
+    scrollToBottom = () => {
+        document.getElementById("endOfTable").scrollIntoView({behavior: "smooth"});
     }
 
 
@@ -59,9 +73,8 @@ class CardCollection extends Component {
 
     render() {
         return (
-            <div>
-            <ActionButton identifier="addActor-btn" actionName={this.AddCard} textValue="Add Actor"/>
             <div id="tableDiv">
+            <ActionButton identifier="addActor-btn" actionName={this.AddCard} textValue="Add Actor"/>
                 <table id="mainTable">
                 <thead>
                     <tr>
@@ -75,7 +88,7 @@ class CardCollection extends Component {
                 {this.state.Cards}
                 </tbody>
                 </table>
-            </div>
+                <div id="endOfTable" ref={this.endOfTableRef}></div>
             </div>
         )
     }

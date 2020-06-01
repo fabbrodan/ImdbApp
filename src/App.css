@@ -1,5 +1,6 @@
 .App > .Header {
   height: 50px;
-  position: absolute;
+  position: relative;
   top: 0px;
+  text-align: center;
 }

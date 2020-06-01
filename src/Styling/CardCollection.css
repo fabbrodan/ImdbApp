@@ -1,19 +1,15 @@
-#tableDiv {
-    display: block;
-}
-
-#addActor-btn {
-    display:inline-flexbox;
-}
-
 img {
     width: 250px;
     height: 350px;
     border-radius: 5px;
 }
 
+#addActor-btn {
+    position: fixed;
+    left: 100px;
+}
+
 table {
-    display:inline-flexbox;
     margin-left: 25%;
     margin-right: 25%;
     width: 50%;
