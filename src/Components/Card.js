@@ -3,31 +3,6 @@ import ReactDOM from 'react-dom'
 import ActionButton from './ActionButton';
 
 class Card extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div>
-                <div>
-                </div>
-                <table>
-                    <thead>
-                        <td>Image</td>
-                        <td>Name</td>
-                        <td>Popularity</td>
-                        <td>Action</td>
-                    </thead>
-                    <Row imgUrl="abc.com" name="Dummy Name" popularity="10.057465340"/>
-                </table>
-            </div>
-        )
-    }
-
-}
-
-class Row extends Component {
 
     constructor(props) {
         super(props);
