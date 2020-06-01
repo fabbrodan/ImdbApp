@@ -15,7 +15,7 @@ class Card extends Component {
     render() {
         return(
             <tr>
-                <td className="imgCell">
+                <td colSpan="2" className="imgCell">
                     <img src={this.imgUrl} alt={this.name + ".jpg"}></img>
                 </td>
                 <td className="nameCell">

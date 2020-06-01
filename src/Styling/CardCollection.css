@@ -5,8 +5,13 @@ img {
 }
 
 #addActor-btn {
-    position: fixed;
-    left: 100px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#addActor-btn:hover {
+ background-color: darkblue;
+ color:white;
 }
 
 table {
@@ -16,6 +21,7 @@ table {
     border: solid 2px black;
     border-radius: 5px;
     border-collapse: collapse;
+    position: relative;
 }
 
 th {
@@ -23,10 +29,12 @@ th {
     padding-bottom: 5px;
     text-align: left;
     background-color:white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-th > input[type="button"] {
-    
+th > input[type="button"] { 
     border: none;
     font-weight: bolder;
     font-size: medium;
@@ -40,4 +48,17 @@ th > input[type="button"]:hover {
 tr > td {
     border-bottom: 1px solid black;
     border-collapse: collapse;
+}
+
+tr > td > input[type="button"] {
+    font-weight: bold;
+    color: maroon;
+    border-radius: 5px;
+}
+
+tr > td > input[type="button"]:hover {
+    font-weight: bold;
+    color: maroon;
+    border-radius: 5px;
+    background-color: crimson;
 }

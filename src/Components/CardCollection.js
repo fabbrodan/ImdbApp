@@ -14,12 +14,12 @@ class CardCollection extends Component {
         this.state = {
             Cards: []
         }
-
-        const endOfTableRef = React.createRef();
     }
 
     componentDidMount() {
-        this.scrollToBottom();
+        for (var i = 0; i < 5; i++) {
+            this.AddCard();
+        }
     }
 
     componentDidUpdate() {
@@ -31,7 +31,7 @@ class CardCollection extends Component {
     }
 
 
-    AddCard = (e) => {
+    AddCard = () => {
         var randomIndex = Math.floor(Math.random() * this.CardMap.length);
         this.setState({
             state: this.state.Cards.push(this.CardMap[randomIndex])
@@ -74,7 +74,6 @@ class CardCollection extends Component {
     render() {
         return (
             <div id="tableDiv">
-            <ActionButton identifier="addActor-btn" actionName={this.AddCard} textValue="Add Actor"/>
                 <table id="mainTable">
                 <thead>
                     <tr>
@@ -82,13 +81,14 @@ class CardCollection extends Component {
                     <th><ActionButton actionName={this.OrderByName} textValue="Name"/></th>
                     <th><ActionButton actionName={this.OrderByPopularity} textValue="Popularity"/></th>
                     <th>Action</th>
+                    <th><ActionButton identifier="addActor-btn" actionName={this.AddCard} textValue="Add Actor"/></th>
                     </tr>
                 </thead>
                 <tbody>
                 {this.state.Cards}
                 </tbody>
                 </table>
-                <div id="endOfTable" ref={this.endOfTableRef}></div>
+                <div id="endOfTable"></div>
             </div>
         )
     }
